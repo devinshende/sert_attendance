@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sert_attendance/widgets/signupform.dart';
+import 'package:sert_attendance/screens/attendance.dart';
 
 void main() => runApp(SignUpApp());
 
@@ -12,7 +13,7 @@ class SignUpApp extends StatelessWidget {
           accentColor: Colors.deepPurpleAccent),
       routes: {
         '/': (context) => SignUpScreen(),
-        '/welcome': (context) => WelcomeScreen(),
+        '/attendance': (context) => AttendancePage(),
       },
     );
   }
@@ -29,12 +30,5 @@ class SignUpScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class WelcomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

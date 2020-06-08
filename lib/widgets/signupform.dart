@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sert_attendance/main.dart';
 
 class SignUpForm extends StatefulWidget {
   @override
@@ -14,7 +13,7 @@ class _SignUpFormState extends State<SignUpForm> {
   bool _dataEntered = false;
 
   void _submit() {
-    Navigator.of(context).pushNamed('/welcome');
+    Navigator.of(context).pushReplacementNamed('/attendance');
   }
 
   void updateDataEntered() {
@@ -66,7 +65,7 @@ class _SignUpFormState extends State<SignUpForm> {
             child: FlatButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(7))),
-                onPressed: _dataEntered ? _submit : null,
+                onPressed: _submit,
                 disabledColor: Color(0xffE6E6FD),
                 disabledTextColor: Colors.grey,
                 textColor: Colors.white,
