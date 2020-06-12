@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sert_attendance/widgets/signupform.dart';
 import 'package:sert_attendance/screens/attendance.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() => runApp(SignUpApp());
 

@@ -19,15 +19,11 @@ class _SignUpFormState extends State<SignUpForm> {
 
   void updateDataEntered() {
     if (_firstNameTextController.text != "") {
-      setState(() {
-        print('1/3');
-        progress = 0.33;
-      });
+      print('1/3');
+      progress = 0.33;
       if (_lastNameTextController.text != "") {
-        setState(() {
-          print('2/3');
-          progress = 0.66;
-        });
+        print('2/3');
+        progress = 0.66;
         if (_usernameTextController.text != "") {
           setState(() {
             print('3/3');
