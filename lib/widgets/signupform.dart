@@ -10,6 +10,7 @@ class _SignUpFormState extends State<SignUpForm> {
   final _lastNameTextController = TextEditingController();
   final _usernameTextController = TextEditingController();
 
+  double progress = 0;
   bool _dataEntered = false;
 
   void _submit() {
@@ -18,10 +19,20 @@ class _SignUpFormState extends State<SignUpForm> {
 
   void updateDataEntered() {
     if (_firstNameTextController.text != "") {
+      setState(() {
+        print('1/3');
+        progress = 0.33;
+      });
       if (_lastNameTextController.text != "") {
+        setState(() {
+          print('2/3');
+          progress = 0.66;
+        });
         if (_usernameTextController.text != "") {
           setState(() {
+            print('3/3');
             _dataEntered = true;
+            progress = 1;
           });
           print('true $_dataEntered');
         }
@@ -37,6 +48,8 @@ class _SignUpFormState extends State<SignUpForm> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          LinearProgressIndicator(value: progress),
+          SizedBox(height: 20),
           Text('Sign Up', style: Theme.of(context).textTheme.headline4),
           Padding(
             padding: EdgeInsets.all(8.0),

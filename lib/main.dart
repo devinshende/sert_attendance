@@ -9,8 +9,10 @@ class SignUpApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-          primaryColor: Colors.deepPurple,
-          accentColor: Colors.deepPurpleAccent),
+//        fontFamily: 'Roboto',
+        primaryColor: Colors.deepPurple,
+        accentColor: Colors.deepPurpleAccent,
+      ),
       routes: {
         '/': (context) => SignUpScreen(),
         '/attendance': (context) => AttendancePage(),
@@ -24,7 +26,11 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: SizedBox(
+        child: Container(
+//          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              color: Colors.black12),
           width: 400,
           child: SignUpForm(),
         ),

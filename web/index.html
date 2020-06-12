@@ -29,5 +29,30 @@
     }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCFXI3Qlgq-7UbnpTUu5V5dk_-WFAiUdQc",
+    authDomain: "sert-attendance.firebaseapp.com",
+    databaseURL: "https://sert-attendance.firebaseio.com",
+    projectId: "sert-attendance",
+    storageBucket: "sert-attendance.appspot.com",
+    messagingSenderId: "192166482810",
+    appId: "1:192166482810:web:ef0e1703742d2692d73cc3",
+    measurementId: "G-BFWRGS4JXT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+
+  </script>
 </body>
 </html>

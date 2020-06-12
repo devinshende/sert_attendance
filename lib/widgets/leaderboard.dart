@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
-const kLeaderboardStyle =
-    TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold);
+const kLeaderboardStyle = TextStyle(
+  fontSize: 40,
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
+);
 
 class LeaderBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(30),
       color: Colors.white10,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -34,10 +38,7 @@ class LeaderboardTile extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          '1',
-          style: TextStyle(fontSize: 30),
-        ),
+        Text('1', style: TextStyle(fontSize: 30)),
         Text('First Last'),
         Text('$hours hours'),
       ],
